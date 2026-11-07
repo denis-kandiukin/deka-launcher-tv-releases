@@ -1,0 +1,45 @@
+name: Ошибка
+description: Что-то работает не так или лаунчер падает
+labels: ["ошибка"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что сообщаете! Не вставляйте сюда токен Home Assistant, ключ DEKA Pro и адрес дома.
+  - type: input
+    id: version
+    attributes:
+      label: Версия лаунчера
+      description: настройки лаунчера → «О лаунчере»
+      placeholder: "0.11"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: ТВ или приставка, версия Android
+      placeholder: "Haier 55 miniLED, Android TV 14"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Что делали, что ожидали увидеть и что увидели.
+      placeholder: |
+        1. Открыл «Дом»
+        2. Долгое ОК на карточке
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Журнал сбоев
+      description: настройки лаунчера → «О лаунчере» → «Журнал сбоев» → «На телефон (QR)» → «Скопировать». Токены и ключи уже вырезаны.
+      render: text
+  - type: textarea
+    id: screens
+    attributes:
+      label: Фото экрана
+      description: Если есть — перетащите сюда.

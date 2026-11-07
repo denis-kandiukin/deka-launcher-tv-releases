@@ -1,0 +1,20 @@
+name: Идея
+description: Предложить новую возможность или улучшение
+labels: ["идея"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу это решит
+      description: Что сейчас неудобно или чего не хватает.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Как это могло бы выглядеть
+  - type: input
+    id: device
+    attributes:
+      label: ТВ или приставка
+      description: Если идея касается конкретного устройства.
